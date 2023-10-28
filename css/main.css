@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+.container {
+  display: grid;
+  grid-template-rows: 80vh repeat(5, max-content);
+  grid-template-columns: repeat(6, 1fr);
+}
+.section-titel {
+  text-align: center;
+  padding: 25px;
+  font-size: 27px;
+  color: orange;
+}
+
+.section-titel::before,
+.section-titel:after {
+  background-color: black;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 5%;
+}
+
+.section-titel:before {
+  right: 0.5rem;
+  margin-left: -50%;
+}
+
+.section-titel:after {
+  left: 0.5rem;
+  margin-right: -50%;
+}
