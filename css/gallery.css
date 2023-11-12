@@ -1,0 +1,53 @@
+.gallery {
+  grid-column: 1/-1;
+}
+.gallery-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 250px);
+  padding: 20px 50px;
+  gap: 1rem;
+
+  grid-template-areas: "gallery-1 gallery-1 gallery-2" "gallery-3 gallery-4 gallery-2" "gallery-3 gallery-5 gallery-5";
+}
+
+.gallery1 {
+  grid-area: gallery-1;
+  background-image: url(../pic/pic-gallery1.jpeg);
+}
+
+.gallery2 {
+  grid-area: gallery-2;
+  background-image: url(../pic/pic-gallery2.jpeg);
+}
+.gallery3 {
+  grid-area: gallery-3;
+  background-image: url(../pic/pic-gallery3.jpeg);
+}
+
+.gallery4 {
+  grid-area: gallery-4;
+  background-image: url(../pic/pic-gallery4.webp);
+}
+
+.gallery5 {
+  grid-area: gallery-5;
+  background-image: url(../pic/pic-backgrand.webp);
+}
+
+.imag-gallery {
+  width: 100%;
+  border-radius: 15px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media screen and (max-width: 600px) {
+  .gallery-section {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 250px);
+
+    grid-template-areas: "gallery-1 gallery-1 " "gallery-2 gallery-3" "gallery-4 gallery-4" "gallery-5 gallery-5";
+  }
+}
